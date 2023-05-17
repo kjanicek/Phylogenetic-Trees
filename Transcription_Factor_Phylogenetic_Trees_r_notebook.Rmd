@@ -1080,6 +1080,18 @@ seven species. These trees are quite large, with the exception of the
 Tbox tree, and further analysis with software programs that allow for
 interaction on specific branches is needed to visualize in detail.
 ```{r}
+library(tidyverse)
+library(treeio)
+library(tidytree)
+library(ggtree)
+library(ggsci)
+library(ggstar)
+library(ggplot2)
+library(ggstance)
+library(ape)
+library(ggtreeExtra)
+library(dbplyr)
+
 # Trees for IPR001356 with Human names and highlighting Nematostella and Aurelia
 ggtree(tree001356, layout="circular", branch.length="none", size=0.1) +
      geom_fruit(data=newAnnot, geom=geom_star, offset=0.01, size=0.3, starstroke=0, aes(y=fullEntry, fill=Organism)) +
